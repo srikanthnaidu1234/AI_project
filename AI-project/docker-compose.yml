@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  aiproject:
+    image: aiproject
+    build:
+      context: .
+      dockerfile: ./Dockerfile
