@@ -1,129 +1,76 @@
-# VSCode Dev Container: Python Development with Rye, uv, and Ruff
+---
+title: FINETUNING LANGUAGE MODELS - CAN I PATENT THIS?
+colorFrom: gray
+colorTo: purple
+sdk: streamlit
+sdk_version: 1.21.0
+app_file: app.py
+pinned: false
+---
 
-<div align="center">
+# Finetuning Language Models- CAN I PATENT THIS?
 
-[![Rye](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/rye/main/artwork/badge.json)](https://github.com/astral-sh/rye)
-[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+************************
 
-[![Versions](https://img.shields.io/badge/python-3.9%20|%203.10%20|%203.11%20|%203.12%20-green.svg)](https://github.com/a5chin/python-rye)
+Milestone-3 notebook: https://github.com/srikanthnaidu1234/AI_project/blob/main/AI-project/src/AI_USPTO_milestone_3_Srikanth_Naidu.ipynb
 
-[![Ruff](https://github.com/a5chin/python-rye/actions/workflows/ruff.yml/badge.svg)](https://github.com/a5chin/python-rye/actions/workflows/ruff.yml)
-[![test](https://github.com/a5chin/python-rye/actions/workflows/test.yml/badge.svg)](https://github.com/a5chin/python-rye/actions/workflows/test.yml)
-[![Docker](https://github.com/a5chin/python-rye/actions/workflows/docker.yml/badge.svg)](https://github.com/a5chin/python-rye/actions/workflows/docker.yml)
+Hugging Face App:
+Patent Predictor APP: https://huggingface.co/spaces/srikanth0008/AI_Project_USPTO
+Sentimental Analysis APP: https://huggingface.co/spaces/srikanth0008/Sentiment_Analysis_App
 
-</div>
 
-## Overview
-This repository contains configurations to set up a Python development environment using VSCode's Dev Container feature.
-The environment includes Rye, uv, and Ruff.
+Landing Page for the App: https://sites.google.com/view/language-mode-patent-predictor/home
 
-## Contents
-The following are the features.
+App Demonstration Video: https://github.com/srikanthnaidu1234/AI_project/blob/milestone-4/AI-project/src/Demo_USPTO_app.mp4
 
-### Branches
-- [main](https://github.com/a5chin/python-rye/tree/main)
-- [jupyter](https://github.com/a5chin/python-rye/tree/jupyter)
+The tuned model shared to the Hugging Face Hub: https://huggingface.co/srikanth0008/tuned-for-patentability/tree/main
 
-### Dev Container
-- `devcontainer.json`
-  - settings
-    - formatOnSave by Ruff
-  - features
-    - pre-commit
-  - extentions
-    - [charliermarsh.ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff)
-    - [codezombiech.gitignore](https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore)
-    - [eamodio.gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
-    - [kevinrose.vsc-python-indent](https://marketplace.visualstudio.com/items?itemName=kevinrose.vsc-python-indent)
-    - [mosapride.zenkaku](https://marketplace.visualstudio.com/items?itemName=mosapride.zenkaku)
-    - [ms-azuretools.vscode-docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
-    - [ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-    - [njpwerner.autodocstring](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring)
-    - [oderwat.indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
-    - [pkief.material-icon-theme](https://marketplace.visualstudio.com/items?itemName=pkief.material-icon-theme)
-    - [shardulm94.trailing-spaces](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces)
-    - [usernamehw.errorlens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
-    - [yzhang.markdown-all-in-one](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
-- `Dockerfile`
-  - Rye
-    - `rye config --set-bool behavior.global-python=true`
-    - `rye config --set-bool behavior.use-uv=true`
-  - Only Dev dependencies
-    - `pre-commit`
-    - `pytest`
-    - `ruff`
+************************
 
-### GitHub Actions
-- `docker.yml`
-  - Workflow to check if you can build with Docker
-- `test.yml`
-  - Workflow to check if all the described tests can be passed with pytest
-- `ruff.yml`
-  - Workflow to check if you can go through Formatter and Linter with Ruff
+## Summary
 
-### Ruff
-Ruff can be used to replace Flake8, Black, isort, pydocstyle, pyupgrade, autoflake, etc., and yet run tens to hundreds of times faster than the individual tools.
+***********
 
-To change the configuration, it is necessary to rewrite ruff.toml, and [it is recommended](https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules) to set it to ignore conflicts such as the following:
-```toml
-ignore = [
-    "COM812", "COM819",
-    "D100", "D203", "D213", "D300",
-    "E111", "E114", "E117",
-    "ISC001", "ISC002",
-    "Q000", "Q001", "Q002", "Q003",
-    "W191",
-]
-```
+**milestone1:** https://github.com/srikanthnaidu1234/AI_project/blob/main/AI-project/src/Milestone1_README.md
 
-### pre-commit
-The `.pre-commit-config.yaml` file can contain scripts to be executed before commit.
+**milestone2:** https://github.com/srikanthnaidu1234/AI_project/blob/main/AI-project/src/Milestone2_README.md
 
-```sh
-# Python Formatter
-ruff format .
+**milestone3:** https://github.com/srikanthnaidu1234/AI_project/blob/main/AI-project/src/Milestone3_README.md
 
-# Python Linter
-ruff check . --fix
+Dataset: https://github.com/suzgunmirac/hupd
 
-# Docker Linter
-hodolint Dockerfile
-```
+**Data Preprocessing**
 
-### Install
-Only sync based on the production lockfile (`requirements.lock`) instead of the development lockfile (`requirements-dev.lock`).
+The load_dataset function to load all the patent applications that were filed to the USPTO in January 2016. We specify the date ranges of the training and validation sets as January 1-21, 2016 and January 22-31, 2016, respectively. This is a smaller dataset.AS mention in the [the Harvard USPTO patent dataset](https://github.com/suzgunmirac/hupd) paper.
 
-```sh
-# Install also include develop dependencies
-rye sync
+ There are two datasets: train and validation. Here are the steps:
 
-# If you do not want dev dependencies to be installed
-rye sync --no-dev
-```
+ - Label-to-index mapping for the decision status field
+ - map the 'abstract' and 'claims' sections and tokenize them using pretrained('distilbert-base-uncased') tokenizer
+ - format them
+ - use DataLoader with batch_size = 16
 
-## Appendix
-### The structure of this repository
-```
-.
-├── .devcontainer
-│   ├── devcontainer.json
-│   └── Dockerfile
-├── Dockerfile
-├── .github
-│   └── workflows
-│       ├── docker.yml
-│       ├── ruff.yml
-│       └── pytest.yml
-├── .gitignore
-├── LICENSE
-├── .pre-commit-config.yaml
-├── pyproject.toml
-├── .python-version
-├── README.md
-├── requirements-dev.lock
-├── requirements.lock
-├── ruff.toml
-└── .vscode
-    └── settings.json
-```
+**milestone3:**
+
+The following notebook has the tuned model. There are 6 classes in the Harvard USPTO patent dataset and I decided to encode them as follow:
+
+decision_to_str = {'REJECTED': 0, 'ACCEPTED': 1, 'PENDING': 1, 'CONT-REJECTED': 0, 'CONT-ACCEPTED': 1, 'CONT-PENDING': 1}
+
+so that I can get a patentability score between 0 and 1.
+
+The pertained-model 'distilbert-base-uncased' from the Hugging face hub and fine-tune it with the Harvard USPTO patent dataset
+
+
+milestone3 notebook: https://github.com/srikanthnaidu1234/AI_project/blob/main/AI-project/src/AI_USPTO_milestone_3_Srikanth_Naidu.ipynb
+
+The tuned model shared to the Hugging Face Hub: https://huggingface.co/srikanth0008/tuned-for-patentability/tree/main
+
+**milestone4:**
+
+Please see Milestone4 Documentation.md: https://github.com/srikanthnaidu1234/AI_project/blob/main/AI-project/README.md
+
+Here is the landing page for my app: https://sites.google.com/view/language-mode-patent-predictor/home
+
+
+                              **************
+
