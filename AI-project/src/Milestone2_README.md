@@ -17,6 +17,12 @@ This Streamlit app performs sentiment analysis using pretrained models from Hugg
    - Create a `.env` file in the project root
    - Add your Hugging Face token: `HUGGINGFACE_TOKEN=your_token_here`
 
+## Hugging Face Space
+
+The application is deployed as a Hugging Face Space. You can access and use the app here:
+
+[Sentiment Analysis App](https://huggingface.co/spaces/srikanth0008/Sentiment_Analysis_App)
+
 ## Usage
 
 Run the Streamlit app: stream run app.py
